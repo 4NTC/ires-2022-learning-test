@@ -20,7 +20,7 @@ class CreateImplTest {
 
     private Map<String, Team> teams;
     private List<Person> people;
-    @Mock
+    //@Mock
     private Scanner scanner;
     private CreateImpl create;
 
@@ -28,6 +28,7 @@ class CreateImplTest {
     void init() {
         teams = new HashMap<>();
         people = new ArrayList<>();
+        scanner = new Scanner(System.in);
 
         create = new CreateImpl(teams, people, scanner);
     }
@@ -47,7 +48,6 @@ class CreateImplTest {
         String nomeTeam = "team1";
         Team team = new Team(nomeTeam);
         teams.put(team.getName(), team);
-        create.createTeam(nomeTeam);
 
         RuntimeException e = assertThrows(RuntimeException.class,
                 () -> create.createTeam(nomeTeam));
