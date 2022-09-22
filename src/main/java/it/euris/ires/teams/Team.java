@@ -8,9 +8,9 @@ import java.util.List;
 @Getter
 public class Team {
 
-    private final String name;
+    private String name;
 
-    private final List<Person> members;
+    private List<Person> members;
 
     public Team(String name) {
         this.name = name;

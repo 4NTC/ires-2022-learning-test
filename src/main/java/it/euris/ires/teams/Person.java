@@ -8,7 +8,7 @@ import lombok.Setter;
 @Getter
 public class Person {
 
-    private final String name;
+    private String name;
     @Setter private String teamName;
 
 }

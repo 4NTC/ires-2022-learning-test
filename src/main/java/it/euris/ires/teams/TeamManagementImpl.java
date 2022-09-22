@@ -10,11 +10,11 @@ import java.util.Scanner;
 @Getter
 public class TeamManagementImpl implements TeamManagement {
 
-    private final Map<String, Team> teams;
+    private Map<String, Team> teams;
 
-    private final List<Person> people;
+    private List<Person> people;
 
-    private final Scanner scanner;
+    private Scanner scanner;
 
     @Override
     public void sendCommand(String command) {

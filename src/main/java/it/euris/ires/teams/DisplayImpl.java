@@ -11,11 +11,11 @@ import java.util.Scanner;
 @Getter
 public class DisplayImpl implements Display {
 
-    private final Map<String, Team> teams;
+    private Map<String, Team> teams;
 
-    private final List<Person> people;
+    private List<Person> people;
 
-    private final Scanner scanner;
+    private Scanner scanner;
 
     @Override
     public void displayTeam(String nomeTeam) {
