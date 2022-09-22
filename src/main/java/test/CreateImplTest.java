@@ -56,6 +56,19 @@ class CreateImplTest {
     }
 
     @org.junit.jupiter.api.Test
-    void createPerson() {
+    void createPerson_success() {
+        String nomeTeam = "team1";
+        String nomeDipendente = "nomeD";
+        Person response = new Person(nomeDipendente, nomeTeam);
+        Team team = new Team(nomeTeam);
+        teams.put(team.getName(), team);
+
+        create.createPerson(nomeTeam, nomeDipendente);
+
+        Person person = people.get(0);
+
+        Assertions.assertEquals(response.getName(), person.getName());
+        Assertions.assertEquals(response.getTeamName(),person.getTeamName());
+
     }
 }
