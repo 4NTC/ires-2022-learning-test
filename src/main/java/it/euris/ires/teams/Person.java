@@ -9,7 +9,6 @@ import lombok.Setter;
 public class Person {
 
     private final String name;
-    @Setter private Team team;
-
+    @Setter private String teamName;
 
 }
